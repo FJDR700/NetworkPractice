@@ -1,5 +1,4 @@
 package Chat;
-
 import java.io.*;
 import java.net.Socket;
 import java.util.List;
@@ -18,7 +17,7 @@ public class ClientHandler implements Runnable {
     public void run() {
 
         PrintWriter out = null;
-        String name = "Unknown: ";
+        String name = "Unknown";
         try (Socket client = socket){
 
             BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -34,10 +33,10 @@ public class ClientHandler implements Runnable {
 
             while ((userMessage = in.readLine()) != null) {
                 if (userMessage.equalsIgnoreCase("/quit")) break;
-            }
-            for (var receiver : clients) {
-                synchronized (receiver) {
-                    receiver.println(name+": "+userMessage);
+                for (var receiver : clients) {
+                    synchronized (receiver) {
+                        receiver.println(name+": "+userMessage);
+                    }
                 }
             }
         } catch (IOException e) {System.out.println("Client error: " + e.getMessage());}
