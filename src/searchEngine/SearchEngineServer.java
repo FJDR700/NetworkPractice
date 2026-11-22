@@ -10,6 +10,7 @@ public class SearchEngineServer {
         try {
             Scanner in = new Scanner(new File(Texts.FILE.toString()));
             while(in.hasNextLine()) {fileLines.add(in.nextLine());}
+            Collections.sort(fileLines);
             for (var line : fileLines) {
                 if (line.toLowerCase().contains(search.toLowerCase().trim())
                     && !search.isBlank()) list.add(line);}
