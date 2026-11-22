@@ -6,10 +6,8 @@ import java.util.concurrent.*;
 
 public class Server {
     static void main(String[] args) {
-
         List<PrintWriter> clients = new CopyOnWriteArrayList<>();
         ExecutorService pool = Executors.newFixedThreadPool(10);
-
         try (ServerSocket server = new ServerSocket(7000)) {
             System.out.println("Server is ready on port 7000");
             while (true) {
