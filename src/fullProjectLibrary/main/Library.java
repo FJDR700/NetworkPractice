@@ -1,13 +1,18 @@
 package fullProjectLibrary.main;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 public class Library {
+
+    private static final Logger log = Logger.getLogger(Library.class.getName());
+
+
     private List<Book> books = new ArrayList<>();
     private Map<String, Book> booksById = new HashMap<>();
     private List<Loan> loanHistory= new ArrayList<>();
 
-    public boolean addBook(Book book) {
+    public boolean addMedia(Book book) {
         if ( booksById.containsKey(book.getId())) {
             return false;
         }
@@ -20,7 +25,7 @@ public class Library {
         return booksById.get(id);
     }
 
-    public List<Book> getSortedBooks() {
+    public List<Book> getSortedMedia() {
         List<Book> result = new ArrayList<>(books);
         Collections.sort(result);
         return result;
@@ -37,6 +42,7 @@ public class Library {
         }
 
         Loan loan = new Loan(book,borrower);
+        log.info(borrower+" borrowed loan "+loan);
         loanHistory.add(loan);
         return true;
     }
@@ -46,6 +52,7 @@ public class Library {
         if (book == null) {
             return false;
         }
+        log.info("Återlämnad "+book.getTitle());
         return book.returnItem();
     }
 

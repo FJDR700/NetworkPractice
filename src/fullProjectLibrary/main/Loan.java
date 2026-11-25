@@ -3,24 +3,24 @@ package fullProjectLibrary.main;
 import java.time.LocalDate;
 
 public class Loan {
-    private Book book;
+    private Media media;
     private String borrower;
     private LocalDate borrowDate, dueDate;
-    private int userId;
 
-    public Loan(Book book, String borrowed) {
-        this.book = book;
+    public Loan(Media media, String borrowed) {
+        this.media = media;
         this.borrower = borrowed;
         this.borrowDate = LocalDate.now();
-        this.dueDate = borrowDate.plusDays(28);
+        this.dueDate = borrowDate.plusDays(media.loanDays());
     }
 
     public String getBorrower() {return borrower;}
     public LocalDate getBorrowDate() {return borrowDate;}
     public LocalDate getDueDate() {return dueDate;}
+    public boolean isOverdue(LocalDate today) {return today.isAfter(dueDate);}
 
     @Override
     public String toString() {
-        return book.getTitle()+" lånades av: "+ borrower +" "+ userId+ " åter senast " +dueDate;
+        return media.getTitle()+" lånades av "+ borrower + " åter senast " +dueDate;
     }
 }
