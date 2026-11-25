@@ -1,41 +1,22 @@
 package fullProjectLibrary.main;
 
+import static fullProjectLibrary.main.Utility.*;
+
 public class Main {
     public static void main(String[] args) {
-
         Library library = new Library();
-        library.addMedia(new Book("1", "Pippi Långstrump", "Astrid Lindgren", 1945));
-        library.addMedia(new Book("2", "Pippi Långstrump", "Astrid Lindgren", 1945));
-        library.addMedia(new Book("3", "Sagan om Ringen", "Tolkien", 1954));
-        library.addMedia(new Book("4", "Emil i Lönneberg", "Astrid Lindgren", 1964));
 
-        System.out.println("");
+        library.addMedia(new Book("1", "Pippi långstrump", "Astrid lindgren", 1945));
+        library.addMedia(new Book("2", "Pippi långstrump", "Astrid lindgren", 1945));
+        library.addMedia(new Book("3", "Sagan om ringen", "Tolkien", 1954));
+        library.addMedia(new Book("4", "Emil i lönneberga", "Astrid lindgren", 1964));
+        library.addMedia(new Book("5", "ABC", "Astrid lindgren", 1964));
 
-        for ( var book: library.getSortedMedia()){
-            System.out.println(book);
-        }
+        System.out.println("Våra böcker inna alla lån");
 
-        System.out.println("Lån lyckades: "+ library.borrow("1", "Fausto"));
-        System.out.println("Lån lyckades: "+ library.borrow("2", "Emily"));
-
-        System.out.println("Alla lånetagare i vårt system "+ library.getBorrowers());
-
-        System.out.println("");
-
-        //Book book = new Book("1", "Pippi Långstrump", "Astrid Lindgren", 1945);
-
-
-
-
-
-    }
-
-    public static void showCatelog(){
-
-    }
-
-    public static void showDialog(){
-
+        showCatelog(library);
+        showDialog(library);
+        showCatelog(library);
 
     }
 }
