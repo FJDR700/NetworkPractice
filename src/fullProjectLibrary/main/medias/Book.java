@@ -1,4 +1,4 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.medias;
 
 public class Book extends Media {
 
@@ -11,18 +11,11 @@ public class Book extends Media {
         createdBooks++;
     }
 
-    public int getCreatedBooks() {
-        return createdBooks;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
+    public int getCreatedBooks() {return createdBooks;}
+    public String getAuthor() {return author;}
 
     @Override
-    public int loanDays() {
-        return 28;
-    }
+    public int loanDays() {return 28;}
 
     @Override
     public String toString() {return id+" | "+title+" | "+author+" | "+status;}

@@ -1,4 +1,4 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.medias;
 
 public abstract class Media implements Borrowable,Comparable<Media> {
 

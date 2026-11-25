@@ -1,5 +1,6 @@
 package fullProjectLibrary.main;
 
+import fullProjectLibrary.main.medias.Media;
 import java.time.LocalDate;
 
 public class Loan {

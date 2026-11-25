@@ -1,4 +1,7 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.network;
+
+import fullProjectLibrary.main.Library;
+import fullProjectLibrary.main.medias.Media;
 
 import java.io.*;
 import java.net.Socket;

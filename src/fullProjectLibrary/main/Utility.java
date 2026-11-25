@@ -1,5 +1,7 @@
 package fullProjectLibrary.main;
 
+import fullProjectLibrary.main.medias.Media;
+
 public class Utility {
     public static void showCatelog(Library library) {
         for ( Media media: library.getSortedMedia() ) {

@@ -1,5 +1,7 @@
 package fullProjectLibrary.main;
 
+import fullProjectLibrary.main.medias.Book;
+
 import java.util.*;
 import java.util.logging.Logger;
 

@@ -1,4 +1,4 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.medias;
 
 public class Movie extends Media {
     private String director;

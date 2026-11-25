@@ -1,4 +1,4 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.network;
 
 import java.io.BufferedReader;
 import java.io.IOException;

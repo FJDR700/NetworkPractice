@@ -1,4 +1,7 @@
-package fullProjectLibrary.main;
+package fullProjectLibrary.main.network;
+
+import fullProjectLibrary.main.medias.Book;
+import fullProjectLibrary.main.Library;
 
 import java.net.ServerSocket;
 import java.net.Socket;

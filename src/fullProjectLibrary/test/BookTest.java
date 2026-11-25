@@ -1,6 +1,6 @@
 package fullProjectLibrary.test;
 
-import fullProjectLibrary.main.Book;
+import fullProjectLibrary.main.medias.Book;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +14,7 @@ public class BookTest {
         Book book = new Book("1", "Pippi Långstrump", "Astrid Lindgren", 1945);
 
         //Act
-        boolean success = Book.borrow();
+        boolean success = book.borrow();
 
         //Assert
         assertTrue(success);

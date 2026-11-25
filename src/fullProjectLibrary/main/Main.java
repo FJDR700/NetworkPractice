@@ -1,5 +1,6 @@
 package fullProjectLibrary.main;
 
+import fullProjectLibrary.main.medias.Book;
 import static fullProjectLibrary.main.Utility.*;
 
 public class Main {
